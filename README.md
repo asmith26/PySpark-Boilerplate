@@ -1,3 +1,5 @@
+Spark submit structure: `spark-submit --py-files pyfile.py,zipfile.zip main.py --arg1 val1`
+
 1. Prepare python files for pyspark:
 ```
 pip install -r requirements.txt -t ./src/libs
