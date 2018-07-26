@@ -13,6 +13,8 @@ docker run --rm -it --link master:master --volumes-from spark-datastore --volume
 
 or with yarn* `export PYSPARK_PYTHON="/home/PythonVersions/Python3.5.5/bin/python3.5" && spark2-submit --conf spark.executorEnv.PYTHONHASHSEED=321 --master yarn --py-files dist/jobs.zip,dist/libs.zip dist/main.py --job wordcount`
 
+> **Better Note:** Using Miniconda to manage non-sudo python and pacakges (as per below): https://conda.io/docs/user-guide/getting-started.html
+
 >*Note: since `--py-files` inserts these files into the `PYTHONPATH`, we need to ensure we have permission to do so. The easiest way to ensure this is by putting the Python install somewhere widely accessible: e.g (includes instructions for install Python from source and getting it on the slaves when no internet is avaiable)
   ```
 # Download https://www.python.org/downloads/
